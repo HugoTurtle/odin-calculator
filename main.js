@@ -21,3 +21,11 @@ let a = "";
 let b = "";
 let operator = "";
 let display = document.querySelector("#display");
+
+const clearButton = document.getElementById("clear");
+clearButton.addEventListener("click", () => {
+    a = "";
+    b = "";
+    operator = "";
+    display.textContent = "0000"
+})
