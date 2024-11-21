@@ -44,3 +44,12 @@ let numberButtons = numberContainer.querySelectorAll("button");
             }
         })
     });
+    
+let operatorContainer = document.querySelector(".operator-container")
+let operatorButtons = operatorContainer.querySelectorAll("button");
+    operatorButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            operator = button.textContent;
+            display.textContent = operator;
+        })
+    });
