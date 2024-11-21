@@ -20,3 +20,4 @@ const operate = (a, operator, b) => {
 let a = "";
 let b = "";
 let operator = "";
+let display = document.querySelector("#display");
