@@ -29,3 +29,18 @@ clearButton.addEventListener("click", () => {
     operator = "";
     display.textContent = "0000"
 })
+
+let numberContainer = document.querySelector(".number-container")
+let numberButtons = numberContainer.querySelectorAll("button");
+    numberButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            if(operator === "") {
+                a += button.textContent;
+                display.textContent = a;
+            }
+            else if(!(operator === "")) {
+                b += button.textContent;
+                display.textContent = b;
+            }
+        })
+    });
