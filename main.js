@@ -17,3 +17,6 @@ const operate = (a, operator, b) => {
             console.log("Error");
     }
 }
+let a = "";
+let b = "";
+let operator = "";
