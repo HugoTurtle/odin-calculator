@@ -53,3 +53,8 @@ let operatorButtons = operatorContainer.querySelectorAll("button");
             display.textContent = operator;
         })
     });
+    
+const equals = document.querySelector("#equals");
+equals.addEventListener("click", () => {
+    display.textContent = operate(a,operator,b);
+})
