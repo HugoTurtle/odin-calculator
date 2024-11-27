@@ -56,8 +56,14 @@ let operatorButtons = operatorContainer.querySelectorAll("button");
 
 const equals = document.querySelector("#equals");
 equals.addEventListener("click", () => {
-    a = operate(+a,operator,+b);
+    a = trimDecimal(operate(+a,operator,+b));
     b = "";
     operator = "";
     display.textContent = a;
 })
+
+const trimDecimal = (num) => {
+    if(num % 1) {
+        return +num.toFixed(4);
+    }
+}
