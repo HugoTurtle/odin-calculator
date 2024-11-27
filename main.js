@@ -28,6 +28,7 @@ clearButton.addEventListener("click", () => {
     b = "";
     operator = "";
     display.textContent = "0000"
+    equals.disabled = true;
 })
 
 let numberContainer = document.querySelector(".number-container")
@@ -42,6 +43,7 @@ let numberButtons = numberContainer.querySelectorAll("button");
                 b += button.textContent;
                 display.textContent = b;
             }
+            enableEqualsButton();
         })
     });
     
@@ -55,6 +57,14 @@ let operatorButtons = operatorContainer.querySelectorAll("button");
     });
 
 const equals = document.querySelector("#equals");
+equals.disabled = true;
+
+const enableEqualsButton = () => {
+    if(b) {
+        equals.disabled = false;
+    }
+}
+
 equals.addEventListener("click", () => {
     a = trimDecimal(operate(+a,operator,+b));
     b = "";
