@@ -34,7 +34,7 @@ let numberContainer = document.querySelector(".number-container")
 let numberButtons = numberContainer.querySelectorAll("button");
     numberButtons.forEach(button => {
         button.addEventListener("click", () => {
-            if(operator === "" && a === "") {
+            if(operator === "") {
                 a += button.textContent;
                 display.textContent = a;
             }
