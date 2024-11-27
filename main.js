@@ -66,4 +66,5 @@ const trimDecimal = (num) => {
     if(num % 1) {
         return +num.toFixed(4);
     }
+    return num;
 }
