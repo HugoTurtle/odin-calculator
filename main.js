@@ -34,7 +34,7 @@ let numberContainer = document.querySelector(".number-container")
 let numberButtons = numberContainer.querySelectorAll("button");
     numberButtons.forEach(button => {
         button.addEventListener("click", () => {
-            if(operator === "") {
+            if(operator === "" && a === "") {
                 a += button.textContent;
                 display.textContent = a;
             }
@@ -56,5 +56,8 @@ let operatorButtons = operatorContainer.querySelectorAll("button");
 
 const equals = document.querySelector("#equals");
 equals.addEventListener("click", () => {
-    display.textContent = operate(+a,operator,+b);
+    a = operate(+a,operator,+b);
+    b = "";
+    operator = "";
+    display.textContent = a;
 })
