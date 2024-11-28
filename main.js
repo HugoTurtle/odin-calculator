@@ -66,10 +66,15 @@ const enableEqualsButton = () => {
 }
 
 equals.addEventListener("click", () => {
-    a = trimDecimal(operate(+a,operator,+b));
-    b = "";
-    operator = "";
-    display.textContent = a;
+    // Check division by 0
+    if(operator == "/" && b == "0") {
+        display.textContent = "Nice try";
+    } 
+    // Perform calculation 
+        a = trimDecimal(operate(+a,operator,+b));
+        b = "";
+        operator = "";
+        display.textContent = a;
 })
 
 const trimDecimal = (num) => {
